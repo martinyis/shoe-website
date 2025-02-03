@@ -1,20 +1,40 @@
+// Navbar.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { Squash as Hamburger } from "hamburger-react";
-
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+  const [products, setProducts] = useState<{ name: string; slug: string }[]>(
+    []
+  );
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("/website/info.json");
+        const data = await response.json();
+        console.log(data[0].products);
+        setProducts(data[0].products);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   const handleLinkClick = (): void => {
     setNavbarOpen(false);
   };
 
   useEffect(() => {
-    document.body.style.overflow = navbarOpen ? "hidden" : "auto";
+    const handleScrollLock = () => {
+      document.body.style.overflow = navbarOpen ? "hidden" : "auto";
+    };
+    handleScrollLock();
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -29,9 +49,11 @@ const Navbar = (props: Props) => {
           <li className="hover:text-secondary">
             <Link href="/">Home</Link>
           </li>
-          <li className="hover:text-secondary">
-            <Link href="/product/ywarm">Y-Warm</Link>
-          </li>
+          {products.map((product) => (
+            <li key={product.slug} className="hover:text-secondary">
+              <Link href={`/product/${product.slug}`}>{product.name}</Link>
+            </li>
+          ))}
           <li className="hover:text-secondary">
             <Link href="#contact">Contact</Link>
           </li>
@@ -69,11 +91,16 @@ const Navbar = (props: Props) => {
                 Home
               </Link>
             </li>
-            <li className="hover:text-secondary">
-              <Link href="/" onClick={handleLinkClick}>
-                Y-Warm
-              </Link>
-            </li>
+            {products.map((product) => (
+              <li key={product.slug} className="hover:text-secondary">
+                <Link
+                  href={`/product/${product.slug}`}
+                  onClick={handleLinkClick}
+                >
+                  {product.name}
+                </Link>
+              </li>
+            ))}
             <li className="hover:text-secondary">
               <Link href="#contact" onClick={handleLinkClick}>
                 Contact

@@ -10,7 +10,8 @@ const Logo = ({ width, height }: TypeLogoProps) => {
   return (
     <Link href="/">
       <Image
-        src="images/logo.svg"
+        priority
+        src="/images/logo.svg"
         alt="Picture of the author"
         width={width}
         height={height}
