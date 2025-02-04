@@ -1,4 +1,3 @@
-// components/ProductDetails.tsx
 import React from "react";
 import Image from "next/image";
 
@@ -29,7 +28,13 @@ const ProductDetails = ({
       {/* Description Section */}
       <div className="lg:w-full w-1/2 flex flex-col lg:mt-6 mt-0">
         <p className="text-[20px] font-normal max-w-[700px]">{description}</p>
-        <button className="px-[32px] py-[16px] bg-white text-[16px] text-black rounded-[8px] max-w-[184px] mt-[26px]">
+        <button
+          className="px-[32px] py-[16px] bg-white text-[16px] text-black rounded-[8px] max-w-[184px] mt-[26px] 
+                     transition-all duration-300 ease-in-out 
+                     hover:bg-primary hover:text-white 
+                     hover:shadow-lg hover:scale-105 
+                     focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
           Contact Us
         </button>
       </div>

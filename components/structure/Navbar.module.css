@@ -1,0 +1,30 @@
+/* Navbar.module.css */
+.navLink {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navLink:hover {
+  color: #00ff00; /* Change to your desired hover color */
+  transform: scale(1.1);
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00ff00; /* Change to your desired underline color */
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}

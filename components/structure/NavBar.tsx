@@ -1,10 +1,11 @@
-// Navbar.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { Squash as Hamburger } from "hamburger-react";
 import useFetchProducts from "@/lib/hooks/useProducts";
+import styles from "./Navbar.module.css"; // Import the CSS module
+
 type Props = {};
 
 const Navbar = (props: Props) => {
@@ -31,16 +32,25 @@ const Navbar = (props: Props) => {
       <nav className="flex md:hidden h-[120px] justify-between items-center text-white text-[16px] font-normal">
         <Logo width={194} height={100} />
         <ul className="flex gap-[19px] items-center">
-          <li className="hover:text-secondary">
-            <Link href="/">Home</Link>
+          <li>
+            <Link href="/" className={styles.navLink}>
+              Home
+            </Link>
           </li>
           {products.map((product) => (
-            <li key={product.slug} className="hover:text-secondary">
-              <Link href={`/product/${product.slug}`}>{product.name}</Link>
+            <li key={product.slug}>
+              <Link
+                href={`/product/${product.slug}`}
+                className={styles.navLink}
+              >
+                {product.name}
+              </Link>
             </li>
           ))}
-          <li className="hover:text-secondary">
-            <Link href="#contact">Contact</Link>
+          <li>
+            <Link href="#contact" className={styles.navLink}>
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
@@ -71,23 +81,32 @@ const Navbar = (props: Props) => {
           }}
         >
           <ul className="text-[23px] font-normal text-center text-white flex flex-col gap-10 pt-[60px]">
-            <li className="hover:text-secondary">
-              <Link href="/" onClick={handleLinkClick}>
+            <li>
+              <Link
+                href="/"
+                className={styles.navLink}
+                onClick={handleLinkClick}
+              >
                 Home
               </Link>
             </li>
             {products.map((product) => (
-              <li key={product.slug} className="hover:text-secondary">
+              <li key={product.slug}>
                 <Link
                   href={`/product/${product.slug}`}
+                  className={styles.navLink}
                   onClick={handleLinkClick}
                 >
                   {product.name}
                 </Link>
               </li>
             ))}
-            <li className="hover:text-secondary">
-              <Link href="#contact" onClick={handleLinkClick}>
+            <li>
+              <Link
+                href="#contact"
+                className={styles.navLink}
+                onClick={handleLinkClick}
+              >
                 Contact
               </Link>
             </li>

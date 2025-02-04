@@ -7,6 +7,9 @@ import React, { useEffect, useState } from "react";
 import Benefits from "@/components/product/Benefits";
 import ProductGallery from "@/components/product/ProductGallery";
 import Specs from "@/components/product/Specs";
+import MainTittle from "@/components/ui/MainTittle";
+import Link from "next/link";
+import Transfrom from "@/components/product/Transfrom";
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -56,9 +59,6 @@ const Product = () => {
       <div className="mt-[180px]">
         <Line />
       </div>
-      {/* <div className="mt-[137px]">
-        <ProductGallery images={data.gallery} />
-      </div> */}
       <div className="mt-[65px] mb-[280px]">
         {data.specs && <Specs specs={data.specs} />}
       </div>

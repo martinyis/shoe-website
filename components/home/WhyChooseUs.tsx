@@ -59,7 +59,6 @@ const WhyChooseUs = () => {
           />
         </div>
       </Wrapper>
-      <div className="mt-[96px] h-[1px] w-[100%] bg-primary"></div>
     </div>
   );
 };

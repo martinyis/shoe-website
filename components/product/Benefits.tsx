@@ -64,7 +64,7 @@ const Benefits: React.FC<BenefitsProps> = ({ features }) => {
   return (
     <Wrapper>
       <MainTittle center={false} text="Features & Benefits" />
-      <div className="mx-auto grid md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-8 mt-[50px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto grid md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-8 mt-[50px] sm:px-6 lg:px-8">
         {displayFeatures.map((feature, index) => (
           <BenefitCard
             key={index}
