@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
   }, [navbarOpen]);
 
   return (
-    <header className="max-w-[1800px] mx-auto px-10 md:px-5">
+    <header className="max-w-[1440px] mx-auto px-10 md:px-5">
       {/* Desktop Navbar */}
       <nav className="flex md:hidden h-[120px] justify-between items-center text-white text-[16px] font-normal">
         <Logo width={194} height={100} />
