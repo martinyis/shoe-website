@@ -1,0 +1,38 @@
+[
+  {
+    "name": "R-MAT",
+    "slug": "r-mat",
+    "description": "R-MAT is a next-generation foam that surpasses EVA in cushioning, traction, and durability, offering superior comfort, energy return, and long-lasting performance for midsoles, outsoles, and sock liners.",
+    "features": [
+      {
+        "title": "Superior Cushioning",
+        "subtitle": "Enhanced comfort with lower compression set and higher resilience than EVA.",
+        "icon": "/images/icons/Leaf.svg"
+      },
+      {
+        "title": "Exceptional Traction",
+        "subtitle": "Delivers better grip with higher static and kinetic friction indexes for improved stability.",
+        "icon": "/images/icons/Clever.svg"
+      },
+      {
+        "title": "Long-Lasting Durability",
+        "subtitle": "Maintains cushioning and energy return far beyond the lifespan of traditional EVA materials.",
+        "icon": "/images/icons/Armor.svg"
+      }
+    ],
+    "gallery": ["rmatimage1.svg", "rmatimage2.svg", "rmatimage3.svg"],
+    "specs": [
+      { "name": "Hardness", "spec": "35-37 Asker C" },
+      { "name": "Density", "spec": "0.11-0.15 g/cm³" },
+      { "name": "Resilience", "spec": "54-63%" },
+      { "name": "Compression Set (6 hrs, 45°C)", "spec": "28-50%" },
+      {
+        "name": "Coefficient of Friction (Static/Kinetic on Varnished Wood - Dry)",
+        "spec": "1.41 / 1.20"
+      },
+      { "name": "DIN Abrasion", "spec": "175 mm³" }
+    ],
+    "shortdescription": "Next-generation foam with superior cushioning, traction, and durability.",
+    "page-name": "rmat"
+  }
+]

@@ -16,7 +16,7 @@ const ProductDetails = ({
   return (
     <div className="flex lg:flex-col flex-row items-center gap-x-[64px] mt-[22px] mx-auto">
       {/* Image Section */}
-      <div className="lg:w-full">
+      <div className="w-[50%] lg:w-full">
         <Image
           src={imageUrl}
           alt={altText}

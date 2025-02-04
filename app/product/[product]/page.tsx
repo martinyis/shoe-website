@@ -5,6 +5,8 @@ import ProductDetails from "@/components/product/ProductDetails";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Benefits from "@/components/product/Benefits";
+import ProductGallery from "@/components/product/ProductGallery";
+import Specs from "@/components/product/Specs";
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -46,7 +48,19 @@ const Product = () => {
       </Wrapper>
       <Line />
       <div className="mt-[65px]">
-        <Benefits />
+        <Benefits features={data.features} />
+      </div>
+      <div className="mt-[137px]">
+        {data.gallery && <ProductGallery images={data.gallery} />}
+      </div>
+      <div className="mt-[180px]">
+        <Line />
+      </div>
+      {/* <div className="mt-[137px]">
+        <ProductGallery images={data.gallery} />
+      </div> */}
+      <div className="mt-[65px] mb-[280px]">
+        {data.specs && <Specs specs={data.specs} />}
       </div>
     </div>
   );

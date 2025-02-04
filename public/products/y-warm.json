@@ -3,20 +3,24 @@
     "name": "Y-Warm",
     "slug": "y-warm",
     "description": "Y-Warm, by Beijing Matrix Technologies, is an ultra-light, eco-friendly insulation with superior thermal efficiency. Thin and flexible, it suits apparel, footwear, and industry while offering moisture permeability, quick-drying, and antibacterial properties. With international patents, it significantly reduces carbon footprint.",
-    "features": {
-      "1": {
+    "features": [
+      {
         "title": "Ultra-Light and Thin Design",
-        "subtitle": "Y-Warm provides superior insulation with minimal weight and thickness, enhancing comfort and wearability."
+        "subtitle": "Y-Warm provides superior insulation with minimal weight and thickness, enhancing comfort and wearability.",
+        "icon": "/images/icons/Leaf.svg"
       },
-      "2": {
+      {
         "title": "Eco-Friendly and Sustainable",
-        "subtitle": "Reduces resource consumption by 75% and minimizes carbon footprint, promoting environmental responsibility"
+        "subtitle": "Reduces resource consumption by 75% and minimizes carbon footprint, promoting environmental responsibility",
+        "icon": "/images/icons/Clever.svg"
       },
-      "3": {
+      {
         "title": "Versatile & Durable",
-        "subtitle": "Offers moisture permeability, quick-drying, and antibacterial properties, making it ideal for various applications like apparel and footwear."
+        "subtitle": "Offers moisture permeability, quick-drying, and antibacterial properties, making it ideal for various applications like apparel and footwear.",
+        "icon": "/images/icons/Armor.svg"
       }
-    },
+    ],
+
     "gallery": ["y-warmimage1.svg", "y-warmimage2.svg", "y-warmimage3.svg"],
     "specs": [
       { "name": "Thermal Conductivity", "spec": "0.00824 W/m·K" },

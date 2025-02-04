@@ -1,5 +1,8 @@
 [
   {
-    "products": [{ "name": "Y-Warm", "slug": "y-warm", "info": "y-warm.json" }]
+    "products": [
+      { "name": "Y-Warm", "slug": "y-warm", "info": "y-warm.json" },
+      { "name": "R-MAT", "slug": "r-mat", "info": "r-mat.json" }
+    ]
   }
 ]
