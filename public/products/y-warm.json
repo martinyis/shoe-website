@@ -17,11 +17,7 @@
         "subtitle": "Offers moisture permeability, quick-drying, and antibacterial properties, making it ideal for various applications like apparel and footwear."
       }
     },
-    "gallery": [
-      "images/products/y-warmimage1.svg",
-      "images/products/y-warmimage2.svg",
-      "images/products/y-warmimage3.svg"
-    ],
+    "gallery": ["y-warmimage1.svg", "y-warmimage2.svg", "y-warmimage3.svg"],
     "specs": [
       { "name": "Thermal Conductivity", "spec": "0.00824 W/m·K" },
       { "name": "Thickness Range", "spec": "0.5 mm to 1.0 mm" },
@@ -30,7 +26,7 @@
       { "name": "Warm costs", "spec": "$2.50/m" },
       { "name": "Durability", "spec": "Retains performance at -60°C" }
     ],
-    "short-description": "Ultra-light, eco-friendly insulation with thermal and antibacterial properties.",
+    "shortdescription": "Ultra-light, eco-friendly insulation with thermal and antibacterial properties.",
     "page-name": "ywarm"
   }
 ]

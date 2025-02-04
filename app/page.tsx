@@ -1,5 +1,6 @@
 // pages/y-warm.tsx
 import ProductCards from "@/components/home/ProductCards";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 import MainTittle from "@/components/ui/MainTittle";
 import Image from "next/image";
 
@@ -32,6 +33,7 @@ export default function YWarm() {
         <MainTittle text="Featured Products" />
         <div className="pt-[50px]">
           <ProductCards />
+          <WhyChooseUs />
         </div>
       </div>
     </div>

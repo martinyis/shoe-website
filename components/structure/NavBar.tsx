@@ -4,27 +4,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { Squash as Hamburger } from "hamburger-react";
+import useFetchProducts from "@/lib/hooks/useProducts";
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const { products } = useFetchProducts();
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
-  const [products, setProducts] = useState<{ name: string; slug: string }[]>(
-    []
-  );
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("/website/info.json");
-        const data = await response.json();
-        console.log(data[0].products);
-        setProducts(data[0].products);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-    fetchProducts();
-  }, []);
 
   const handleLinkClick = (): void => {
     setNavbarOpen(false);
