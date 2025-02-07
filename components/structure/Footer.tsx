@@ -20,7 +20,9 @@ const Footer = () => {
               Ultra Footwear Accelerator
             </h3>
             <ul className="mt-[19px]">
-              <li className="text-[16px]">Crafting excellence since 1995</li>
+              <li className="text-[16px] max-w-[232px]">
+                Founded in 2016 and based in Waltham, Massachusetts
+              </li>
             </ul>
           </div>
           <div className="flex flex-col">
@@ -40,7 +42,7 @@ const Footer = () => {
                 </li>
               ))}
               <li className="text-[16px] hover:text-secondary">
-                <Link href="#contact">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -67,7 +69,7 @@ const Footer = () => {
         </div>
         <Line />
         <p className="text-center text-[16px] mt-[36px]">
-          © 2025 SHOECRAFT. All rights reserved.
+          © 2025 Ultra Footwear Accelerator. All rights reserved.
         </p>
       </Wrapper>
     </div>

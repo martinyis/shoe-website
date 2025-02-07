@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import { Squash as Hamburger } from "hamburger-react";
 import useFetchProducts from "@/lib/hooks/useProducts";
 import styles from "./Navbar.module.css"; // Import the CSS module
+import Line from "../ui/Line";
 
 type Props = {};
 
@@ -48,7 +49,7 @@ const Navbar = (props: Props) => {
             </li>
           ))}
           <li>
-            <Link href="#contact" className={styles.navLink}>
+            <Link href="/contact" className={styles.navLink}>
               Contact
             </Link>
           </li>
@@ -103,7 +104,7 @@ const Navbar = (props: Props) => {
             ))}
             <li>
               <Link
-                href="#contact"
+                href="/contact"
                 className={styles.navLink}
                 onClick={handleLinkClick}
               >

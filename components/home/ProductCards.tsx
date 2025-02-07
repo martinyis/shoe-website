@@ -2,9 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import useFetchProducts from "@/lib/hooks/useProducts";
 import { getProductInfoArray } from "@/lib/functions/info";
-import { randomInt } from "crypto";
+import { Slide } from "react-awesome-reveal";
 
 type CardProps = {
   title: string;
@@ -15,10 +14,10 @@ type CardProps = {
 
 const ProductCard = ({ title, description, src, slug }: CardProps) => {
   return (
-    <div className="p-[25px] border-[1px] border-primary rounded-[8px] transition-all duration-300 hover:shadow-lg hover:scale-[1.05] max-w-[500px] md:mx-auto">
+    <div className="p-[25px] border-[1px] border-primary rounded-[8px] transition-all duration-300 hover:shadow-lg hover:scale-[1.02] max-w-[500px] md:mx-auto">
       <div className="">
         <Image
-          className="rounded-[8px]"
+          className="rounded-[8px] "
           src={src}
           width={344}
           height={192}
@@ -41,6 +40,7 @@ const ProductCard = ({ title, description, src, slug }: CardProps) => {
 
 const ProductCards = () => {
   const [cards, setCards] = useState<{}[]>([]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -56,18 +56,21 @@ const ProductCards = () => {
     };
     fetchProducts();
   }, []);
+
   return (
-    <div className="max-w-[1280px] mx-auto flex flex-row gap-x-[32px] md:flex-col xl:gap-y-[32px]  sm:flex-col xs:flex-col px-[20px]">
-      {cards.map((card: any, index: number) => (
-        <ProductCard
-          key={index}
-          title={card.name}
-          description={card.shortdescription}
-          src={`/images/products/${card.gallery[0]}`}
-          slug={card.slug}
-        />
-      ))}
-    </div>
+    <Slide direction="up" duration={2000} damping={0.2} triggerOnce>
+      <div className="max-w-[1280px] mx-auto flex flex-row gap-x-[32px] md:flex-col xl:gap-y-[32px] sm:flex-col xs:flex-col px-[20px]">
+        {cards.map((card: any, index: number) => (
+          <ProductCard
+            key={index}
+            title={card.name}
+            description={card.shortdescription}
+            src={`/images/products/${card.gallery[0]}`}
+            slug={card.slug}
+          />
+        ))}
+      </div>
+    </Slide>
   );
 };
 

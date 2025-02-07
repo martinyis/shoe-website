@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Wrapper from "../structure/Wrapper";
-import MainTittle from "../ui/MainTittle";
+import MainTittle from "@/components/ui/MainTittle";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from "next/image";

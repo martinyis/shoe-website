@@ -1,0 +1,22 @@
+[
+  {
+    "about": "Founded in 2016 and based in Waltham, Massachusetts, Ultra Footwear Accelerator is dedicated to helping brands bring innovative products to life. We collaborate with a wide network of global suppliers, offering expertise in materials such as leathers, recycled leathers, advanced outsoles, insoles, and more. Our mission is to support brands in creating cutting-edge footwear solutions. For inquiries, please reach out to us through our contact form.",
+    "whychooseus": [
+      {
+        "title": "Innovative Materials",
+        "description": "We offer a wide range of materials, including leathers, recycled leathers, advanced outsoles, insoles, and more.",
+        "icon": "/images/icons/Leaf.svg"
+      },
+      {
+        "title": "Global Network",
+        "icon": "/images/icons/Leaf.svg",
+        "description": "Our network of suppliers spans the globe, allowing us to source the best materials for your project."
+      },
+      {
+        "title": "Expertise",
+        "icon": "/images/icons/Quality.svg",
+        "description": "Our team has years of experience in the footwear industry, providing you with the knowledge and support you need."
+      }
+    ]
+  }
+]

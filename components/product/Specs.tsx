@@ -1,6 +1,6 @@
 import React from "react";
 import Wrapper from "../structure/Wrapper";
-import MainTittle from "../ui/MainTittle";
+import MainTittle from "@/components/ui/MainTittle";
 import { div } from "framer-motion/client";
 
 type Spec = {

@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "../structure/Wrapper";
 import Link from "next/link";
-import MainTittle from "../ui/MainTittle";
+import MainTittle from "@/components/ui/MainTittle";
 
 const Transfrom = () => {
   return (

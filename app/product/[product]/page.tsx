@@ -36,7 +36,6 @@ const Product = () => {
 
   return (
     <div>
-      <Line />
       <Wrapper>
         <div className="mt-[60px] mb-[48px]">
           <h1 className="text-[48px] font-bold">{data.name}</h1>

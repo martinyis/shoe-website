@@ -1,6 +1,6 @@
 import React from "react";
 import Wrapper from "../structure/Wrapper";
-import MainTittle from "../ui/MainTittle";
+import MainTittle from "@/components/ui/MainTittle";
 import Image from "next/image";
 
 type QualityProps = {
@@ -8,6 +8,10 @@ type QualityProps = {
   description: string;
   icon: string;
   iconWidth?: number;
+};
+
+type WhyChooseUsProps = {
+  data: { title: string; description: string; icon: string }[];
 };
 
 const Quality = ({ title, description, icon, iconWidth }: QualityProps) => {
@@ -32,7 +36,7 @@ const Quality = ({ title, description, icon, iconWidth }: QualityProps) => {
   );
 };
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ data }: WhyChooseUsProps) => {
   return (
     <div>
       <div className="mt-[96px] h-[1px] w-[100%] bg-primary"></div>
@@ -41,22 +45,14 @@ const WhyChooseUs = () => {
           <MainTittle text="Why Choose Us" />
         </div>
         <div className="max-w-[1248px] mx-auto grid md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-8 mt-[50px] px-4 sm:px-6 lg:px-8">
-          <Quality
-            title="Sustainability"
-            description="Eco-friendly materials and sustainable practices."
-            icon="/images/icons/Leaf.svg"
-          />
-          <Quality
-            title="Innovation"
-            description="Cutting-edge designs and materials."
-            icon="/images/icons/Lamp.svg"
-            iconWidth={24}
-          />
-          <Quality
-            title="Quality"
-            description="Premium materials and expert craftsmanship."
-            icon="/images/icons/Quality.svg"
-          />
+          {data?.map((quality, index) => (
+            <Quality
+              key={index}
+              title={quality.title}
+              description={quality.description}
+              icon={quality.icon}
+            />
+          ))}
         </div>
       </Wrapper>
     </div>

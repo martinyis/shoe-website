@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Wrapper from "../structure/Wrapper";
-import MainTittle from "../ui/MainTittle";
+import MainTittle from "@/components/ui/MainTittle";
 import Image from "next/image";
 
 type BenefitCardProps = {
