@@ -65,7 +65,7 @@ const ProductCards = () => {
   return (
     <Slide direction="up" duration={2000} damping={0.2} triggerOnce>
       <div className="max-w-[1280px] mx-auto grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-8 px-5">
-        {cards.map((card: any, index: number) => (
+        {cards.slice(0, 3).map((card: any, index: number) => (
           <ProductCard
             key={index}
             title={card.name}
