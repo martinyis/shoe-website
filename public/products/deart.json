@@ -1,0 +1,49 @@
+[
+  {
+    "name": "DeArt",
+    "slug": "deart",
+    "description": "DeArt is a global leader in high-quality accessory manufacturing, blending craftsmanship with smart, sustainable production in China, Italy, and Cambodia. It specializes in customized solutions for luxury and emerging brands, prioritizing innovation, efficiency, and ESG responsibility.",
+    "features": [
+      {
+        "title": "Smart & Sustainable Manufacturing",
+        "subtitle": "Combines advanced technology with eco-friendly practices for high efficiency and minimal waste.",
+        "icon": "/images/icons/Leaf.svg"
+      },
+      {
+        "title": "Global Production Network",
+        "subtitle": "Facilities in China, Italy, and Cambodia ensure flexible, high-quality, and cost-effective solutions.",
+        "icon": "/images/icons/Clever.svg"
+      },
+      {
+        "title": "Customization & Innovation",
+        "subtitle": "Tailored designs and cutting-edge R&D support luxury and emerging brands.",
+        "icon": "/images/icons/Armor.svg"
+      }
+    ],
+    "gallery": [],
+    "specs": [
+      {
+        "name": "Capacity",
+        "spec": "2.2M+ pieces/year (Shenzhen), 150K units/month (Cambodia)"
+      },
+      {
+        "name": "Facilities",
+        "spec": "Dongguan: 50,000 sqm, Shenzhen: 50,000 sqm"
+      },
+      {
+        "name": "Automation",
+        "spec": "MES system, SAP ERP, CNC cutting, laser engraving"
+      },
+      {
+        "name": "Sustainability",
+        "spec": "ESG materials, recycled leather, upcycling"
+      },
+      {
+        "name": "Quality Control",
+        "spec": "Flexing, abrasion, crocking, and oven testing"
+      }
+    ],
+    "shortdescription": "Global leader in sustainable, high-quality accessory manufacturing",
+    "page-name": "deart"
+  }
+]

@@ -1,9 +1,9 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { getProductInfoArray } from "@/lib/functions/info";
 import { Slide } from "react-awesome-reveal";
+import YwarmLogo from "../ui/YwarmLogo";
 
 type CardProps = {
   title: string;
@@ -14,25 +14,30 @@ type CardProps = {
 
 const ProductCard = ({ title, description, src, slug }: CardProps) => {
   return (
-    <div className="p-[25px] border-[1px] border-primary rounded-[8px] transition-all duration-300 hover:shadow-lg hover:scale-[1.02] max-w-[500px] md:mx-auto">
-      <div className="">
+    <div className="p-6 border border-primary rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] max-w-[500px] md:mx-auto">
+      <div className="relative w-full aspect-[16/9]">
         <Image
-          className="rounded-[8px] "
+          className="rounded-lg object-cover"
           src={src}
-          width={344}
-          height={192}
           alt="Product Image"
+          fill
+          sizes="(max-width: 500px) 100vw, 500px"
         />
       </div>
-      <h2 className="text-[20px] pt-[22px] font-bold">{title}</h2>
-      <p className="pt-[8px] text-[16px] font-normal text-gray max-w-[358px]">
-        {description}
-      </p>
+
+      {slug === "y-warm" ? (
+        <div className="pt-6 font-bold">
+          <YwarmLogo width={40} height={40} />
+        </div>
+      ) : (
+        <h2 className="text-xl pt-6 font-bold">{title}</h2>
+      )}
+      <p className="pt-2 text-base font-normal text-gray">{description}</p>
       <Link
         href={`/product/${slug}`}
-        className="text-secondary text-[16px] font-normal transition-all duration-300 hover:text-primary hover:underline"
+        className="inline-block mt-5 text-secondary text-base font-normal transition-all duration-300 hover:text-primary hover:underline"
       >
-        <p className="mt-[19px]">Learn more →</p>
+        Learn more →
       </Link>
     </div>
   );
@@ -59,7 +64,7 @@ const ProductCards = () => {
 
   return (
     <Slide direction="up" duration={2000} damping={0.2} triggerOnce>
-      <div className="max-w-[1280px] mx-auto flex flex-row gap-x-[32px] md:flex-col xl:gap-y-[32px] sm:flex-col xs:flex-col px-[20px]">
+      <div className="max-w-[1280px] mx-auto grid grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-8 px-5">
         {cards.map((card: any, index: number) => (
           <ProductCard
             key={index}

@@ -10,6 +10,7 @@ import Specs from "@/components/product/Specs";
 import MainTittle from "@/components/ui/MainTittle";
 import Link from "next/link";
 import Transfrom from "@/components/product/Transfrom";
+import YwarmLogo from "@/components/ui/YwarmLogo";
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -18,6 +19,7 @@ const Product = () => {
   useEffect(() => {
     // Extract slug from pathname
     const slug = pathname.split("/").pop();
+    console.log("slug", slug);
 
     const getInfo = async () => {
       try {
@@ -38,10 +40,15 @@ const Product = () => {
     <div>
       <Wrapper>
         <div className="mt-[60px] mb-[48px]">
-          <h1 className="text-[48px] font-bold">{data.name}</h1>
+          {data.name == "Y-Warm" ? (
+            <YwarmLogo width={100} height={100} />
+          ) : (
+            <h1 className="text-[48px] font-bold">{data.name}</h1>
+          )}
+
           {data.gallery && data.description && (
             <ProductDetails
-              imageUrl={`/images/products/${data.gallery[0]}`}
+              imageUrl={`/images/products/${data.gallery[0] || ""}`}
               altText={data.name}
               description={data.description}
             />
@@ -53,7 +60,7 @@ const Product = () => {
         <Benefits features={data.features} />
       </div>
       <div className="mt-[137px]">
-        {data.gallery && <ProductGallery images={data.gallery} />}
+        {/* {data.gallery && <ProductGallery images={data.gallery} />} */}
       </div>
       <div className="mt-[180px]">
         <Line />

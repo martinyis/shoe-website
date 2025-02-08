@@ -1,21 +1,21 @@
 [
   {
-    "about": "Founded in 2016 and based in Waltham, Massachusetts, Ultra Footwear Accelerator is dedicated to helping brands bring innovative products to life. We collaborate with a wide network of global suppliers, offering expertise in materials such as leathers, recycled leathers, advanced outsoles, insoles, and more. Our mission is to support brands in creating cutting-edge footwear solutions. For inquiries, please reach out to us through our contact form.",
+    "about": "Founded in 2016 and based in Waltham, Massachusetts, Ultra Footwear Accelerator is dedicated to helping brands bring innovative footwear and accessories to life. We collaborate with a wide network of global suppliers, offering expertise in materials such as leathers, recycled leathers, advanced outsoles, insoles, and high-performance components. In addition to footwear, we support the development of premium accessories, including bags and other complementary products. Our mission is to empower brands in creating cutting-edge solutions. For inquiries, please reach out to us through our contact form.",
     "whychooseus": [
       {
-        "title": "Innovative Materials",
-        "description": "We offer a wide range of materials, including leathers, recycled leathers, advanced outsoles, insoles, and more.",
-        "icon": "/images/icons/Leaf.svg"
+        "title": "Expertise in Innovation",
+        "description": "We specialize in cutting-edge footwear and accessory development.",
+        "icon": "GiTeamIdea"
       },
       {
-        "title": "Global Network",
-        "icon": "/images/icons/Leaf.svg",
-        "description": "Our network of suppliers spans the globe, allowing us to source the best materials for your project."
+        "title": "Global Supply Network",
+        "description": "Our materials range from premium leathers to sustainable alternatives.",
+        "icon": "TbNetwork"
       },
       {
-        "title": "Expertise",
-        "icon": "/images/icons/Quality.svg",
-        "description": "Our team has years of experience in the footwear industry, providing you with the knowledge and support you need."
+        "title": "End-to-End Support",
+        "description": "From concept to production, we guide brands at every stage.",
+        "icon": "MdSupportAgent"
       }
     ]
   }
