@@ -20,7 +20,12 @@
         "icon": "/images/icons/Armor.svg"
       }
     ],
-    "gallery": ["maydiang.png"],
+    "gallery": [
+      "maydiang.png",
+      "maydiang1.png",
+      "maydiang2.png",
+      "maydiang3.png"
+    ],
     "specs": [
       {
         "name": "Production Capacity",

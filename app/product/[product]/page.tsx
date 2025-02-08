@@ -60,7 +60,7 @@ const Product = () => {
         <Benefits features={data.features} />
       </div>
       <div className="mt-[137px]">
-        {/* {data.gallery && <ProductGallery images={data.gallery} />} */}
+        {data.gallery && <ProductGallery images={data.gallery} />}
       </div>
       <div className="mt-[180px]">
         <Line />
