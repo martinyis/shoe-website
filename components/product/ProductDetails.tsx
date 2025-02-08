@@ -12,18 +12,23 @@ const ProductDetails = ({
   altText,
   description,
 }: ProductDetailsProps) => {
+  console.log(imageUrl);
   return (
-    <div className="flex lg:flex-col flex-row items-center gap-x-[64px] mt-[22px] mx-auto">
+    <div
+      className={`flex lg:flex-col flex-row items-center gap-x-[64px] mt-[22px] mx-auto`}
+    >
       {/* Image Section */}
-      <div className="w-[50%] lg:w-full">
-        <Image
-          src={imageUrl}
-          alt={altText}
-          width={608}
-          height={400}
-          className="rounded-[26px] w-full h-auto"
-        />
-      </div>
+      {imageUrl !== "/images/products/" && (
+        <div className="w-[50%] lg:w-full">
+          <Image
+            src={imageUrl}
+            alt={altText}
+            width={608}
+            height={400}
+            className="rounded-[26px] w-full h-auto"
+          />
+        </div>
+      )}
 
       {/* Description Section */}
       <div className="lg:w-full w-1/2 flex flex-col lg:mt-6 mt-0">

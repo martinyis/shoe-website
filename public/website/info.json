@@ -2,7 +2,13 @@
   {
     "products": [
       { "name": "Y-Warm", "slug": "y-warm", "info": "y-warm.json" },
-      { "name": "R-MAT", "slug": "r-mat", "info": "r-mat.json" }
+      { "name": "R-MAT", "slug": "r-mat", "info": "r-mat.json" },
+      { "name": "DeArt", "slug": "deart", "info": "deart.json" },
+      {
+        "name": "MayDiang",
+        "slug": "maydiang",
+        "info": "maydiang.json"
+      }
     ]
   }
 ]
