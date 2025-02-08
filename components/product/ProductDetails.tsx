@@ -29,6 +29,9 @@ const ProductDetails = ({
       <div className="lg:w-full w-1/2 flex flex-col lg:mt-6 mt-0">
         <p className="text-[20px] font-normal max-w-[700px]">{description}</p>
         <button
+          onClick={() => {
+            window.location.href = "/contact";
+          }}
           className="px-[32px] py-[16px] bg-white text-[16px] text-black rounded-[8px] max-w-[184px] mt-[26px] 
                      transition-all duration-300 ease-in-out 
                      hover:bg-primary hover:text-white 

@@ -32,14 +32,14 @@ export default function YWarm() {
       <div className="my-[97px] max-w-[765px] mx-auto">
         <MainTittle text="About Us" />
         <Slide direction="up" duration={1500} triggerOnce>
-          <p className="mt-[42px] text-[18px] font-normal text-center">
+          <p className="mt-[42px] text-[18px] sm:text-[14px] font-normal text-center">
             {homeInfo?.about}
           </p>
         </Slide>
       </div>
 
       {/* Featured Products with Smooth Slide Effect */}
-      <div className="my-[96px] pt-[96px]">
+      <div className="my-[96px] pt-[96px] sm:pt-[50px]">
         <MainTittle text="Featured Products" />
         <div className="pt-[50px]">
           <ProductCards />
