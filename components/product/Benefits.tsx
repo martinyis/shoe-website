@@ -3,6 +3,7 @@ import React from "react";
 import Wrapper from "../structure/Wrapper";
 import MainTittle from "@/components/ui/MainTittle";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal"; // ✅ Import animation
 
 type BenefitCardProps = {
   title: string;
@@ -18,18 +19,24 @@ const BenefitCard = ({
   iconWidth,
 }: BenefitCardProps) => {
   return (
-    <div className="group p-6 rounded-lg border-[1px] border-primary">
-      <div className="flex w-[36px] h-[36px] mb-4">
-        <Image
-          src={icon}
-          alt={title}
-          width={iconWidth ? iconWidth : 36}
-          height={36}
-        />
+    <Fade duration={5000} triggerOnce>
+      {" "}
+      {/* ✅ Fade animation for each card */}
+      <div className="group p-6 rounded-lg border-[1px] border-primary">
+        <div className="flex w-[36px] h-[36px] mb-4">
+          <Image
+            src={icon}
+            alt={title}
+            width={iconWidth ? iconWidth : 36}
+            height={36}
+          />
+        </div>
+        <h3 className="text-[20px] font-bold mt-[3px]">{title}</h3>
+        <p className="text-[16px] font-normal mt-[14px] text-gray">
+          {subtitle}
+        </p>
       </div>
-      <h3 className="text-[20px] font-bold mt-[3px]">{title}</h3>
-      <p className="text-[16px] font-normal mt-[14px] text-gray">{subtitle}</p>
-    </div>
+    </Fade>
   );
 };
 
@@ -42,7 +49,6 @@ type BenefitsProps = {
 };
 
 const Benefits: React.FC<BenefitsProps> = ({ features }) => {
-  // If no features are passed, use default features
   const displayFeatures = features || [
     {
       title: "Sustainability",
@@ -63,7 +69,12 @@ const Benefits: React.FC<BenefitsProps> = ({ features }) => {
 
   return (
     <Wrapper>
-      <MainTittle center={false} text="Features & Benefits" />
+      <Fade triggerOnce>
+        {" "}
+        {/* ✅ Fade animation for the title */}
+        <MainTittle center={false} text="Features & Benefits" />
+      </Fade>
+
       <div className="mx-auto grid md:grid-cols-1 lg:grid-cols-2 grid-cols-3 gap-8 mt-[50px] sm:px-6 lg:px-8">
         {displayFeatures.map((feature, index) => (
           <BenefitCard
