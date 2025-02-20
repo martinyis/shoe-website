@@ -1,4 +1,5 @@
 "use client";
+import InteractiveImages from "@/components/home/InteractiveImages";
 import ProductCards from "@/components/home/ProductCards";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import MainTittle from "@/components/ui/MainTittle";
@@ -42,7 +43,8 @@ export default function YWarm() {
       <div className="my-[96px] pt-[96px] sm:pt-[50px]">
         <MainTittle text="Featured Products" />
         <div className="pt-[50px]">
-          <ProductCards />
+          {/* <ProductCards /> */}
+          <InteractiveImages />
           <Fade>
             <WhyChooseUs data={homeInfo?.whychooseus ?? []} />
           </Fade>
