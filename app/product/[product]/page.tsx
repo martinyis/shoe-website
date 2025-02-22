@@ -11,6 +11,7 @@ import MainTittle from "@/components/ui/MainTittle";
 import Link from "next/link";
 import Transfrom from "@/components/product/Transfrom";
 import YwarmLogo from "@/components/ui/YwarmLogo";
+import { Slide, Fade } from "react-awesome-reveal"; // ✅ Import animations
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -47,16 +48,24 @@ const Product = () => {
           )}
 
           {data.gallery && data.description && (
-            <ProductDetails
-              imageUrl={`/images/products/${data.gallery[0] || ""}`}
-              altText={data.name}
-              description={data.description}
-            />
+            <Fade triggerOnce>
+              {" "}
+              {/* ✅ Fade animation for smoother reveal */}
+              <Slide direction="up" triggerOnce>
+                {" "}
+                {/* ✅ Slide-up for product image */}
+                <ProductDetails
+                  imageUrl={`/images/products/${data.gallery[0] || ""}`}
+                  altText={data.name}
+                  description={data.description}
+                />
+              </Slide>
+            </Fade>
           )}
         </div>
       </Wrapper>
       <Line />
-      <div className="mt-[65px]">
+      <div className="mt-[165px]">
         <Benefits features={data.features} />
       </div>
       <div className="mt-[137px]">

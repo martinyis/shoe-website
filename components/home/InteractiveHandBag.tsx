@@ -2,10 +2,12 @@ import Image from "next/image";
 import YwarmLogo from "../ui/YwarmLogo";
 import Link from "next/link";
 import { useState } from "react";
-
+import useSingleProduct from "@/lib/hooks/useSingleProduct";
+import ProductCard from "./ProductCard";
 type HotspotContent = {
   title: string;
   description: string;
+  slug: string;
 };
 
 const InteractiveHandBag = () => {
@@ -13,11 +15,15 @@ const InteractiveHandBag = () => {
   const [popupContent, setPopupContent] = useState<HotspotContent>({
     title: "",
     description: "",
+    slug: "",
   });
   const [buttonPosition, setButtonPosition] = useState({
     top: "0%",
     left: "0%",
   });
+
+  const { product: deart } = useSingleProduct({ name: "deart" });
+  const { product: maydiang } = useSingleProduct({ name: "maydiang" });
 
   const handleHotspotClick = (
     content: HotspotContent,
@@ -73,33 +79,33 @@ const InteractiveHandBag = () => {
         />
 
         <HotspotButton
-          top="40%"
-          left="40%"
+          top="50%"
+          left="49%"
           onClick={() =>
             handleHotspotClick(
               {
-                title: "Premium Upper Material",
-                description:
-                  "Engineered mesh provides superior breathability and comfort while maintaining durability",
+                title: deart.name || "",
+                description: deart.shortdescription,
+                slug: deart.slug,
               },
-              "40%",
-              "40%"
+              "50%",
+              "49%"
             )
           }
         />
 
         <HotspotButton
-          top="74%"
-          left="35%"
+          top="75%"
+          left="49%"
           onClick={() =>
             handleHotspotClick(
               {
-                title: "Advanced Cushioning",
-                description:
-                  "Responsive foam technology delivers optimal energy return with every step",
+                title: maydiang.name,
+                description: maydiang.shortdescription,
+                slug: maydiang.slug,
               },
-              "74%",
-              "35%"
+              "75%",
+              "49%"
             )
           }
         />
@@ -132,22 +138,12 @@ const InteractiveHandBag = () => {
             </button>
 
             {/* Content Structure */}
-            <div className="space-y-3">
-              <h3 className="text-white font-bold text-lg">
-                {popupContent.title}
-              </h3>
-
-              <p className="text-gray-300 text-sm">
-                {popupContent.description}
-              </p>
-
-              <Link
-                href={`/product/y-warm`}
-                className="inline-block text-secondary hover:text-secondary/80 text-sm transition-colors duration-200 hover:underline"
-              >
-                Learn More →
-              </Link>
-            </div>
+            <ProductCard
+              title={popupContent.title}
+              description={popupContent.description}
+              src={`/images/products/maydiang.png`}
+              slug={popupContent.slug}
+            />
           </div>
         )}
       </div>

@@ -13,10 +13,10 @@ export default function YWarm() {
   return (
     <div className="w-full">
       {/* Banner with Fade Effect */}
-      <div className="relative w-full h-[800px] md:h-[500px] sm:h-[300px] xs:h-[200px]">
+      <div className="relative w-full h-[1000px] md:h-[500px] sm:h-[300px] xs:h-[200px]">
         <Fade duration={3000} triggerOnce>
           <Image
-            src="/images/MainBanner.png"
+            src="/images/MainBannerCropped.svg"
             alt="UFA Banner"
             fill
             priority
