@@ -13,37 +13,40 @@ export default function YWarm() {
   return (
     <div className="w-full">
       {/* Banner with Fade Effect */}
-      <div className="relative w-full h-[1000px] md:h-[500px] sm:h-[300px] xs:h-[200px]">
+      <div className="w-full">
         <Fade duration={3000} triggerOnce>
-          <Image
-            src="/images/MainBannerCropped.svg"
-            alt="UFA Banner"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-            className="absolute inset-0"
-          />
+          <div className="w-full h-auto relative ">
+            <Image
+              src="/images/MainBannerCropped.svg"
+              alt="UFA Banner"
+              width={1920}
+              height={1080}
+              priority
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+              }}
+            />
+          </div>
         </Fade>
       </div>
 
       {/* About Us Section with Slide Effect */}
-      <div className="my-[97px] max-w-[765px] mx-auto">
+      <div className="my-24 max-w-[765px] mx-auto px-4">
         <MainTittle text="About Us" />
         <Slide direction="up" duration={1500} triggerOnce>
-          <p className="mt-[42px] text-[18px] sm:text-[14px] font-normal text-center">
+          <p className="mt-10 text-lg sm:text-sm font-normal text-center">
             {homeInfo?.about}
           </p>
         </Slide>
       </div>
 
       {/* Featured Products with Smooth Slide Effect */}
-      <div className="my-[96px] pt-[96px] sm:pt-[50px]">
+      <div className="my-24 pt-24 sm:pt-12">
         <MainTittle text="Featured Products" />
-        <div className="pt-[50px]">
-          {/* <ProductCards /> */}
+        <div className="pt-12">
           <InteractiveImages />
           <Fade>
             <WhyChooseUs data={homeInfo?.whychooseus ?? []} />
