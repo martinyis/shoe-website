@@ -30,7 +30,7 @@ const Navbar = (props: Props) => {
   return (
     <header className="max-w-[1440px] mx-auto px-10 md:px-5">
       {/* Desktop Navbar */}
-      <nav className="flex md:hidden h-[120px] justify-between items-center text-white text-[16px] font-normal">
+      <nav className="flex  z-50 md:hidden h-[120px] justify-between items-center text-white text-[16px] font-normal">
         <Logo width={194} height={100} />
         <ul className="flex gap-[19px] items-center">
           <li>
@@ -57,7 +57,7 @@ const Navbar = (props: Props) => {
       </nav>
 
       {/* Mobile Navbar */}
-      <nav className="md:block gap-[66px] hidden">
+      <nav className="md:block z-50  gap-[66px] hidden">
         <div className="flex items-center justify-between mt-10">
           <Logo width={94} height={45} />
           <div className="z-50 right-0">
