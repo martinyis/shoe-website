@@ -25,7 +25,7 @@ const Specs = ({ specs }: Specs) => {
             <p className="text-[16px] font-semibold md:text-[14px]">
               {item.name}
             </p>
-            <p className="text-[16px] font-normal md:text-[14px]">
+            <p className="text-[16px] text-right font-normal md:text-[14px]">
               {item.spec}
             </p>
           </div>
