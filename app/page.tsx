@@ -17,7 +17,7 @@ export default function YWarm() {
         <Fade duration={3000} triggerOnce>
           <div className="w-full h-auto relative ">
             <Image
-              src="/images/MainBannerCropped.svg"
+              src="/images/MainBanner.svg"
               alt="UFA Banner"
               width={1920}
               height={1080}
