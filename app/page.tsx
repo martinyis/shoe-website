@@ -49,6 +49,7 @@ export default function YWarm() {
         <MainTittle text="Featured Products" />
         <div className="pt-12">
           <InteractiveImages />
+          {/* Brands component already has its own internal animations */}
           <Brands />
           <Fade>
             <WhyChooseUs data={homeInfo?.whychooseus ?? []} />
