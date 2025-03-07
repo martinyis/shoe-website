@@ -17,6 +17,19 @@
         "description": "From concept to production, we guide brands at every stage.",
         "icon": "MdSupportAgent"
       }
+    ],
+    "brands": [
+      "baker.svg",
+      "birkenstock.svg",
+      "blue_horse.svg",
+      "bogs.svg",
+      "brahim.svg",
+      "canada_goose.svg",
+      "clarks.svg",
+      "footjoy.svg",
+      "lacoste.svg",
+      "martens.svg",
+      "puma.svg"
     ]
   }
 ]

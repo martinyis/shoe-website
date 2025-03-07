@@ -91,3 +91,10 @@ body {
     rgba(174, 63, 255, 1) 100%
   );
 }
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+  animation-play-state: paused;
+}

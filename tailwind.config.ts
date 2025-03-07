@@ -11,6 +11,15 @@ export default {
       fontFamily: {
         logo: ["Oswald"],
       },
+      animation: {
+        marquee: "marquee 1s linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
     },
     screens: {
       xl: { max: "1279px" },

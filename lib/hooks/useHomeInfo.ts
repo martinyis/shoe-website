@@ -8,6 +8,7 @@ const useFetchHomeInfo = () => {
       description: string;
       icon: string;
     }>;
+    brands: Array<String>;
   } | null>(null);
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
