@@ -47,7 +47,7 @@ const ContactPage = () => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     );
-    window.location.href = `mailto:wilsondeng@ultrafa.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:biz@ultrafa.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -133,7 +133,7 @@ const ContactPage = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <MdEmail width={20} height={20} color="#00FF00" />
-                  wilsondeng@ultrafa.com
+                  biz@ultrafa.com
                 </p>
               </div>
             </div>
