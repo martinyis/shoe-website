@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
               <li className="text-[16px] flex gap-x-[8px] items-center">
                 <IoMdMail width={12} height={16} color="#00BFFF" />
-                <p>wilsondeng@ultrafa.com</p>
+                <p>biz@ultrafa.com</p>
               </li>
             </ul>
           </div>

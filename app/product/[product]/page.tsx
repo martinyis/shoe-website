@@ -2,6 +2,7 @@
 import Wrapper from "@/components/structure/Wrapper";
 import Line from "@/components/ui/Line";
 import ProductDetails from "@/components/product/ProductDetails";
+import DeArtProductDetails from "@/components/product/DeArtProductDetails"; // Import the new component
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Benefits from "@/components/product/Benefits";
@@ -11,7 +12,7 @@ import MainTittle from "@/components/ui/MainTittle";
 import Link from "next/link";
 import Transfrom from "@/components/product/Transfrom";
 import YwarmLogo from "@/components/ui/YwarmLogo";
-import { Slide, Fade } from "react-awesome-reveal"; // ✅ Import animations
+import { Slide, Fade } from "react-awesome-reveal";
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -20,6 +21,7 @@ const Product = () => {
   useEffect(() => {
     // Extract slug from pathname
     const slug = pathname.split("/").pop();
+    console.log("product name:", data.name);
     console.log("slug", slug);
 
     const getInfo = async () => {
@@ -41,7 +43,7 @@ const Product = () => {
     <div>
       <Wrapper>
         <div className="mt-[60px] mb-[48px]">
-          {data.name == "Y-Warm" ? (
+          {data.name === "Y-Warm" ? (
             <YwarmLogo width={100} height={100} />
           ) : (
             <h1 className="text-[48px] font-bold">{data.name}</h1>
@@ -49,16 +51,19 @@ const Product = () => {
 
           {data.gallery && data.description && (
             <Fade triggerOnce>
-              {" "}
-              {/* ✅ Fade animation for smoother reveal */}
               <Slide direction="up" triggerOnce>
-                {" "}
-                {/* ✅ Slide-up for product image */}
-                <ProductDetails
-                  imageUrl={`/images/products/${data.gallery[0] || ""}`}
-                  altText={data.name}
-                  description={data.description}
-                />
+                {data.name === "DeArt" ? (
+                  <DeArtProductDetails
+                    videoUrl="/videos/DEART-COACH2023.mov"
+                    description={data.description}
+                  />
+                ) : (
+                  <ProductDetails
+                    imageUrl={`/images/products/${data.gallery[0] || ""}`}
+                    altText={data.name}
+                    description={data.description}
+                  />
+                )}
               </Slide>
             </Fade>
           )}
