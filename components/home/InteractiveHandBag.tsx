@@ -23,7 +23,7 @@ const InteractiveHandBag = () => {
   });
 
   const { product: deart } = useSingleProduct({ name: "deart" });
-  const { product: maydiang } = useSingleProduct({ name: "maydiang" });
+  const { product: milanna } = useSingleProduct({ name: "milanna" });
 
   const handleHotspotClick = (
     content: HotspotContent,
@@ -100,9 +100,9 @@ const InteractiveHandBag = () => {
           onClick={() =>
             handleHotspotClick(
               {
-                title: maydiang.name,
-                description: maydiang.shortdescription,
-                slug: maydiang.slug,
+                title: milanna.name,
+                description: milanna.shortdescription,
+                slug: milanna.slug,
               },
               "75%",
               "49%"
@@ -141,7 +141,7 @@ const InteractiveHandBag = () => {
             <ProductCard
               title={popupContent.title}
               description={popupContent.description}
-              src={`/images/products/maydiang.png`}
+              src={`/images/products/${popupContent.slug}.png`}
               slug={popupContent.slug}
             />
           </div>

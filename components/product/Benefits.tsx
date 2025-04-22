@@ -7,7 +7,7 @@ import Image from "next/image";
 type BenefitCardProps = {
   title: string;
   subtitle: string;
-  icon: string;
+  icon?: string;
   iconWidth?: number;
 };
 
@@ -20,12 +20,14 @@ const BenefitCard = ({
   return (
     <div className="group p-6 rounded-lg border-[1px] border-primary">
       <div className="flex w-[36px] h-[36px] mb-4">
-        <Image
-          src={icon}
-          alt={title}
-          width={iconWidth ? iconWidth : 36}
-          height={36}
-        />
+        {icon && (
+          <Image
+            src={icon}
+            alt={title}
+            width={iconWidth ? iconWidth : 36}
+            height={36}
+          />
+        )}
       </div>
       <h3 className="text-[20px] font-bold mt-[3px]">{title}</h3>
       <p className="text-[16px] font-normal mt-[14px] text-gray">{subtitle}</p>
@@ -37,7 +39,7 @@ type BenefitsProps = {
   features?: {
     title: string;
     subtitle: string;
-    icon: string;
+    icon?: string;
   }[];
 };
 
@@ -71,7 +73,9 @@ const Benefits: React.FC<BenefitsProps> = ({ features }) => {
             title={feature.title}
             subtitle={feature.subtitle}
             icon={feature.icon}
-            iconWidth={feature.icon.includes("Lamp.svg") ? 24 : undefined}
+            iconWidth={
+              feature.icon && feature.icon.includes("Lamp.svg") ? 24 : undefined
+            }
           />
         ))}
       </div>

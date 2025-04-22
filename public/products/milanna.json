@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Milanna",
+    "slug": "milanna",
+    "description": "Milanna Leather Products Co., LTD is a high-end leather goods manufacturer founded in 2010, specializing in PU, cut-and-sew, and bag products including wallets and belts. With state-of-the-art production facilities in China and Cambodia, the company has a monthly capacity of up to one million pieces and serves top brands across Europe, America, and Asia. Milanna stands out for its strong R&D capabilities, sustainable material sourcing, and commitment to quality through ISO and GRS certifications.",
+    "shortdescription": "High-end leather goods manufacturer founded in 2010, specializing in PU, cut-and-sew, and bag products.",
+    "features": [
+      {
+        "title": "Advanced Production Technology",
+        "subtitle": "Automated systems and precision tools ensure consistent quality and faster output.",
+        "icon": "/images/icons/Clever.svg"
+      },
+      {
+        "title": "High Volume Capacity",
+        "subtitle": "Three factories and 3,700+ staff enable nearly one million units monthly.",
+        "icon": "/images/icons/Armor.svg"
+      },
+      {
+        "title": "Certified Quality Assurance",
+        "subtitle": "Products meet top global standards with ISO, GRS, and SLCP certifications.",
+        "icon": "/images/icons/Quality.svg"
+      }
+    ],
+    "specs": [
+      {
+        "name": "Sample Room Capacity",
+        "spec": "7,000–8,000 pieces per month"
+      },
+      {
+        "name": "Monthly Production Output",
+        "spec": "Up to 1,000,000 pieces across all factories"
+      },
+      {
+        "name": "Workforce Size",
+        "spec": "3,800+ employees across China and Cambodia"
+      },
+      {
+        "name": "Production Lead Time",
+        "spec": "80–105 days depending on location"
+      },
+      {
+        "name": "Development Teams",
+        "spec": "24 working groups using OPTITEX 2D/3D pattern systems"
+      },
+      {
+        "name": "Lab Testing Equipment",
+        "spec": "8+ machines, including shock, salt spray, and tensile testers"
+      }
+    ],
+    "gallery": [],
+    "page-name": "milanna"
+  }
+]

@@ -141,7 +141,7 @@ const InteractiveShoe = () => {
             <ProductCard
               title={popupContent.title}
               description={popupContent.description}
-              src={`/images/products/maydiang.png`}
+              src={`/images/products/${popupContent.slug}.png`}
               slug={popupContent.slug}
             />
           </div>

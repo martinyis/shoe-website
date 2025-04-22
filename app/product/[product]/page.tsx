@@ -52,7 +52,7 @@ const Product = () => {
           {data.gallery && data.description && (
             <Fade triggerOnce>
               <Slide direction="up" triggerOnce>
-                {data.name === "DeArt" ? (
+                {data.name === "De-Art" ? (
                   <DeArtProductDetails
                     videoUrl="/videos/DEART-COACH2023.mov"
                     description={data.description}
