@@ -113,11 +113,12 @@ const InteractiveHandBag = () => {
         {/* Styled Black Popup - Now positioned above the button */}
         {showPopup && (
           <div
-            className="absolute bg-black p-5 shadow-xl rounded-lg w-72 md:w-52 z-50 animate-fadeIn border border-primary"
+            className="absolute bg-black p-6 shadow-xl rounded-lg w-[450px] z-50 animate-fadeIn border border-primary"
             style={{
               bottom: `calc(100% - ${buttonPosition.top})`,
               left: buttonPosition.left,
               transform: "translateX(-50%) translateY(-20px)", // Center horizontally and add some space above button
+              maxWidth: "90vw",
             }}
           >
             {/* Triangle pointer - Now pointing down */}
@@ -131,7 +132,7 @@ const InteractiveHandBag = () => {
             />
 
             <button
-              className="absolute top-2 right-2 text-gray-400 hover:text-white transition-colors duration-200 text-xl font-bold"
+              className="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors duration-200 text-xl font-bold"
               onClick={() => setShowPopup(false)}
             >
               ×

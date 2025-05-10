@@ -48,6 +48,12 @@
       }
     ],
     "gallery": [],
+    "brandLogos": [
+      "/images/productbrands/milanna/charles.png",
+      "/images/productbrands/milanna/ecco.png",
+      "/images/productbrands/milanna/kenzo.png",
+      "/images/productbrands/milanna/tommy.png"
+    ],
     "page-name": "milanna",
     "presentation": "/presentations/MILANNAPPT.pptx"
   }

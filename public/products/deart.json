@@ -22,6 +22,12 @@
       }
     ],
     "gallery": [],
+    "brandLogos": [
+      "/images/productbrands/deart/branhim.png",
+      "/images/productbrands/deart/coach.jpg",
+      "/images/productbrands/deart/kenzo.png",
+      "/images/productbrands/deart/pinko.png"
+    ],
     "specs": [
       {
         "name": "Capacity",
