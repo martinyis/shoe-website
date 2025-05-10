@@ -7,9 +7,16 @@ type CardProps = {
   description: string;
   src: string;
   slug: string;
+  presentation?: string;
 };
 
-const ProductCard = ({ title, description, src, slug }: CardProps) => {
+const ProductCard = ({
+  title,
+  description,
+  src,
+  slug,
+  presentation,
+}: CardProps) => {
   return (
     <div className="transition-all duration-300 max-w-[500px] md:mx-auto">
       {/* <div className="relative w-full aspect-[16/9]">
@@ -30,12 +37,15 @@ const ProductCard = ({ title, description, src, slug }: CardProps) => {
         <h2 className="text-xl pt-6 font-bold">{title}</h2>
       )}
       <p className="pt-2 text-base font-normal text-gray">{description}</p>
-      <Link
-        href={`/product/${slug}`}
-        className="inline-block mt-5 text-secondary text-base font-normal transition-all duration-300 hover:text-primary hover:underline"
-      >
-        Learn more →
-      </Link>
+      {presentation && (
+        <a
+          href={presentation}
+          download
+          className="inline-block mt-5 text-secondary text-base font-normal transition-all duration-300 hover:text-primary hover:underline"
+        >
+          Download →
+        </a>
+      )}
     </div>
   );
 };

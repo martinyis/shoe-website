@@ -31,6 +31,7 @@
       { "name": "Durability", "spec": "Retains performance at -60°C" }
     ],
     "shortdescription": "Ultra-light, eco-friendly insulation with thermal and antibacterial properties.",
-    "page-name": "ywarm"
+    "page-name": "ywarm",
+    "presentation": "/presentations/Y_WARMPPT.pptx"
   }
 ]

@@ -143,6 +143,13 @@ const InteractiveHandBag = () => {
               description={popupContent.description}
               src={`/images/products/${popupContent.slug}.png`}
               slug={popupContent.slug}
+              presentation={
+                popupContent.slug === "deart"
+                  ? "/presentations/DEART_PRESENTATIOn.pptx"
+                  : popupContent.slug === "milanna"
+                  ? "/presentations/MILANNAPPT.pptx"
+                  : undefined
+              }
             />
           </div>
         )}

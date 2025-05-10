@@ -62,6 +62,7 @@ const Product = () => {
                     imageUrl={`/images/products/${data.gallery[0] || ""}`}
                     altText={data.name}
                     description={data.description}
+                    presentation={data.presentation}
                   />
                 )}
               </Slide>
@@ -73,9 +74,12 @@ const Product = () => {
       <div className="mt-[165px]">
         <Benefits features={data.features} />
       </div>
-      <div className="mt-[137px]">
-        {data.gallery && <ProductGallery images={data.gallery} />}
-      </div>
+      {data.gallery && data.gallery.length > 0 && (
+        <div className="mt-[137px]">
+          <MainTittle text="Product Gallery" />
+          <ProductGallery images={data.gallery} />
+        </div>
+      )}
       <div className="mt-[180px]">
         <Line />
       </div>

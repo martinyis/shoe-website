@@ -10,9 +10,16 @@ type CardProps = {
   description: string;
   src: string;
   slug: string;
+  presentation: string;
 };
 
-const ProductCard = ({ title, description, src, slug }: CardProps) => {
+const ProductCard = ({
+  title,
+  description,
+  src,
+  slug,
+  presentation,
+}: CardProps) => {
   return (
     <div className="p-6 border border-primary rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] max-w-[500px] md:mx-auto">
       <div className="relative w-full aspect-[16/9]">
@@ -72,6 +79,7 @@ const ProductCards = () => {
             description={card.shortdescription}
             src={`/images/products/${card.gallery[0]}`}
             slug={card.slug}
+            presentation={card.presentation}
           />
         ))}
       </div>

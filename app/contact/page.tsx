@@ -124,7 +124,7 @@ const ContactPage = () => {
               <div className="space-y-4 text-gray-300">
                 <p className="flex items-center gap-2">
                   <FaLocationDot width={20} height={20} color="#00FF00" />
-                  393 Wyman St Ste 300, Waltham, Massachusetts, 02451, United
+                  303 Wyman St Ste 300, Waltham, Massachusetts, 02451, United
                   States
                 </p>
                 <p className="flex items-center gap-2">

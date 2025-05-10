@@ -143,6 +143,11 @@ const InteractiveShoe = () => {
               description={popupContent.description}
               src={`/images/products/${popupContent.slug}.png`}
               slug={popupContent.slug}
+              presentation={
+                popupContent.slug === "y-warm"
+                  ? "/presentations/Y_WARMPPT.pptx"
+                  : undefined
+              }
             />
           </div>
         )}
