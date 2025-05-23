@@ -14,37 +14,7 @@ import Transfrom from "@/components/product/Transfrom";
 import YwarmLogo from "@/components/ui/YwarmLogo";
 import { Slide, Fade } from "react-awesome-reveal";
 import Image from "next/image";
-
-// BrandLogos component
-const BrandLogos = ({ logos }: { logos: string[] }) => {
-  if (!logos || logos.length === 0) return null;
-
-  return (
-    <div className="mb-8">
-      <Wrapper>
-        <MainTittle text="Brand Partners" />
-        <div className="flex flex-wrap justify-center gap-8 mt-12">
-          {logos.map((logo, index) => (
-            <div
-              key={index}
-              className="w-[150px] h-[80px] relative bg-black border border-gray-800 rounded-md overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-white p-2 rounded-md">
-                <Image
-                  src={logo}
-                  alt={`Brand partner logo ${index + 1}`}
-                  fill
-                  className="object-contain"
-                  style={{ mixBlendMode: "multiply" }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </Wrapper>
-    </div>
-  );
-};
+import BrandLogos from "@/components/structure/BrandLogos";
 
 const Product = () => {
   const [data, setData] = useState<any>({});
@@ -88,6 +58,7 @@ const Product = () => {
                   <DeArtProductDetails
                     videoUrl="/videos/DEART-COACH2023.mov"
                     description={data.description}
+                    presentation={data.presentation}
                   />
                 ) : (
                   <ProductDetails
@@ -106,10 +77,10 @@ const Product = () => {
 
       {/* Brand Logos Section */}
       {data.brandLogos && data.brandLogos.length > 0 && (
-        <div className="mt-[65px]">
+        <>
           <BrandLogos logos={data.brandLogos} />
           <Line />
-        </div>
+        </>
       )}
 
       <div className="mt-[165px]">

@@ -91,17 +91,22 @@ body {
     rgba(174, 63, 255, 1) 100%
   );
 }
-.marquee-wrapper {
+
+/* Marquee animation for logos */
+.marquee-container {
   overflow: hidden;
   position: relative;
   width: 100%;
 }
 
-.marquee {
+.marquee-track {
   display: flex;
-  animation: marquee 20s linear infinite;
-  will-change: transform;
   width: fit-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
 }
 
 @keyframes marquee {
@@ -109,21 +114,19 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.33%);
   }
 }
 
-/* Only pause on hover for larger screens */
-@media (min-width: 768px) {
-  .marquee-wrapper:hover .marquee {
-    animation-play-state: paused;
-  }
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
 }
 
-/* Adjust the animation speed for smaller screens */
+/* Faster on mobile */
 @media (max-width: 767px) {
-  .marquee {
-    animation: marquee 20s linear infinite; /* Slightly faster on mobile */
+  .marquee-track {
+    animation-duration: 20s;
   }
 }
 
@@ -133,4 +136,13 @@ body {
     margin-left: 4px;
     margin-right: 4px;
   }
+}
+
+/* End of brand logos animation */
+
+/* Add a background for brand logo images */
+.marquee div,
+.md\\:hidden div {
+  background-color: #fff;
+  border-radius: 8px;
 }
