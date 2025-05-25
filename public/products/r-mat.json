@@ -33,6 +33,7 @@
       { "name": "DIN Abrasion", "spec": "175 mm³" }
     ],
     "shortdescription": "Next-generation foam with superior cushioning, traction, and durability.",
-    "page-name": "rmat"
+    "page-name": "rmat",
+    "presentation": "/presentations/RMATPPT.pptx"
   }
 ]

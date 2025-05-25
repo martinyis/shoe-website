@@ -145,7 +145,9 @@ const InteractiveShoe = () => {
               slug={popupContent.slug}
               presentation={
                 popupContent.slug === "y-warm"
-                  ? "/presentations/Y_WARMPPT.pptx"
+                  ? ywarm?.presentation
+                  : popupContent.slug === "r-mat"
+                  ? rmat?.presentation
                   : undefined
               }
             />

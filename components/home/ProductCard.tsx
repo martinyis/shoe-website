@@ -69,7 +69,7 @@ const ProductCard = ({
             Brand Partners
           </h3>
           <div className="grid grid-cols-2 gap-2">
-            {brandLogos.map((logo, index) => (
+            {brandLogos.slice(0, 4).map((logo, index) => (
               <div
                 key={index}
                 className="h-9 w-full relative bg-black border border-gray-800 rounded-md overflow-hidden"

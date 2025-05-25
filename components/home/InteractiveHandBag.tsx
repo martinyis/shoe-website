@@ -146,9 +146,9 @@ const InteractiveHandBag = () => {
               slug={popupContent.slug}
               presentation={
                 popupContent.slug === "deart"
-                  ? "/presentations/DEART_PRESENTATIOn.pptx"
+                  ? deart?.presentation
                   : popupContent.slug === "milanna"
-                  ? "/presentations/MILANNAPPT.pptx"
+                  ? milanna?.presentation
                   : undefined
               }
             />

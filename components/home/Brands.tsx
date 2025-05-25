@@ -31,14 +31,14 @@ const Brands = () => {
           </h2>
         </Fade>
 
-        <div className="relative overflow-hidden py-12">
-          <div className="marquee-wrapper">
-            <div ref={marqueeRef} className="marquee flex">
+        <div className="relative py-12">
+          <div className="marquee-container">
+            <div ref={marqueeRef} className="marquee-track">
               {/* First set of brands */}
               {homeInfo.brands.map((brand, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="marquee-item flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
                 >
                   <div className="relative w-full h-full flex items-center justify-center">
                     <Image
@@ -55,7 +55,24 @@ const Brands = () => {
               {homeInfo.brands.map((brand, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="marquee-item flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <Image
+                      src={`/images/brands/${brand}`}
+                      alt={brand as string}
+                      fill
+                      style={{ objectFit: "contain" }}
+                      className="transition-transform duration-300 hover:scale-110"
+                    />
+                  </div>
+                </div>
+              ))}
+              {/* Third set for extra smooth looping */}
+              {homeInfo.brands.map((brand, index) => (
+                <div
+                  key={`third-${index}`}
+                  className="marquee-item flex-shrink-0 mx-8 w-32 h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
                 >
                   <div className="relative w-full h-full flex items-center justify-center">
                     <Image
