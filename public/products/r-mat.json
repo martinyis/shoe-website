@@ -21,6 +21,17 @@
       }
     ],
     "gallery": ["rmatimage1.svg", "rmatimage2.svg", "rmatimage3.svg"],
+    "brandLogos": [
+      "/images/productbrands/rmat/nike.png",
+      "/images/productbrands/rmat/adidas.jpg",
+      "/images/productbrands/rmat/lululemon.jpg",
+      "/images/productbrands/rmat/underarmor.png",
+      "/images/productbrands/rmat/northface.jpg",
+      "/images/productbrands/rmat/hokaone.jpg",
+      "/images/productbrands/rmat/altra.jpg",
+      "/images/productbrands/rmat/lining.jpg",
+      "/images/productbrands/rmat/keen.png"
+    ],
     "specs": [
       { "name": "Hardness", "spec": "35-37 Asker C" },
       { "name": "Density", "spec": "0.11-0.15 g/cm³" },

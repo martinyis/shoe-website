@@ -1,6 +1,6 @@
 [
   {
-    "about": "UFA is a pioneering innovation company specializing in cutting-edge materials and technologies for footwear and accessories. With a strong portfolio of patented products, UFA leads the industry with breakthroughs such as R-MAT, a high-performance formula which sold more than 60 million pairs so far; recycled leather for sustainability; oil-resistant for working safety; Y-Warm- a revolutionary in thermal insulation; and Super Critical Foam direct attach—currently the only company capable who developed this revolutionary method in footwear. UFA’s relentless commitment to innovation and sustainability continues to redefine industry standards, delivering unparalleled comfort, durability, and eco-conscious solutions for the future of footwear.",
+    "about": "UFA is a pioneering innovation company specializing in cutting-edge materials and technologies for footwear and accessories. With a strong portfolio of patented products, UFA leads the industry with breakthroughs such as R-MAT, a high-performance formula which sold more than 60 million pairs so far; recycled leather for sustainability; oil-resistant for working safety; Y-Warm- a revolutionary in thermal insulation; and Super Critical Foam direct attach—currently the only company capable who developed this revolutionary method in footwear. UFA's relentless commitment to innovation and sustainability continues to redefine industry standards, delivering unparalleled comfort, durability, and eco-conscious solutions for the future of footwear.",
     "whychooseus": [
       {
         "title": "Expertise in Innovation",
@@ -29,7 +29,11 @@
       "clarks.svg",
       "footjoy.svg",
       "lacoste.svg",
-      "martens.svg"
+      "martens.svg",
+      "nike_rmat.svg",
+      "adidas_rmat.svg",
+      "lululemon_rmat.svg",
+      "northface_rmat.svg"
     ]
   }
 ]
